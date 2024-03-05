@@ -6,7 +6,7 @@ const { SECRET } = require("../constants");
 exports.getUsers = async (req, res) => {
   try {
     const { rows } = await db.query("select users_id,email from users");
-
+    console.log({ rows });
     return res.status(200).json({
       success: true,
       users: rows,
