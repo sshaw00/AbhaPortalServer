@@ -3,6 +3,18 @@ const { hash } = require("bcryptjs");
 const { sign } = require("jsonwebtoken");
 const { SECRET } = require("../constants");
 
+exports.random = async (req, res) => {
+  try {
+    console.log("Getting Response");
+    // return res.status(200).json({
+    //   success: true,
+    //   users: rows,
+    // });
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
 exports.getUsers = async (req, res) => {
   try {
     const { rows } = await db.query("select users_id,email from users");

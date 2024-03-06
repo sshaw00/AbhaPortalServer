@@ -6,6 +6,7 @@ const {
   login,
   protected,
   logout,
+  random,
 } = require("../controllers/auth");
 const { registerValidation, loginValidation } = require("../validators/auth");
 // const {
@@ -18,4 +19,5 @@ router.get("/protected", userAuth, protected);
 router.post("/register", registerValidation, register);
 router.post("/login", loginValidation, login);
 router.get("/logout", logout);
+router.get("/random", random);
 module.exports = router;
