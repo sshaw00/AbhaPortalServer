@@ -15,7 +15,7 @@ const {
 const { userAuth } = require("../middlewares/auth-middleware.js");
 
 router.get("/get-users", getUsers);
-router.get("/protected", userAuth, protected);
+router.get("/protected", protected);
 router.post("/register", registerValidation, validationMiddleware, register);
 router.post("/login", loginValidation, validationMiddleware, login);
 router.get("/logout", logout);
